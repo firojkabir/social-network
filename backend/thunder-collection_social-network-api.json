@@ -1,0 +1,537 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "social-network-api",
+    "dateExported": "2023-08-03T18:18:28.544Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "e4931037-e1bf-489a-9594-1101989cc00f",
+            "name": "users",
+            "containerId": "",
+            "created": "2023-05-21T10:22:28.316Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "329798cd-15e3-4275-86d1-daac9460c8b6",
+            "name": "posts",
+            "containerId": "",
+            "created": "2023-05-21T18:16:06.038Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "3d40f79c-9f11-4a0c-b0c8-1a270a174ecb",
+            "name": "comments",
+            "containerId": "",
+            "created": "2023-05-24T15:15:51.836Z",
+            "sortNum": 30000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "d5a1389c-dd91-431a-8520-4cdee9771fe8",
+            "colId": "70a1277a-b916-4ad4-b7ce-72d7c7176479",
+            "containerId": "e4931037-e1bf-489a-9594-1101989cc00f",
+            "name": "Create user",
+            "url": "{{host}}/auth/register",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-05-21T10:22:04.080Z",
+            "modified": "2023-08-03T16:32:09.775Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Superman\",\n  \"email\": \"superman@gmail.com\",\n  \"password\": \"asd123\",\n  \"age\": 31,\n  \"phone\": \"+4917630169444\",\n  \"country\": \"NZ\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "0505f950-9875-47c5-bf3d-c2a5f5fd0027",
+            "colId": "70a1277a-b916-4ad4-b7ce-72d7c7176479",
+            "containerId": "3d40f79c-9f11-4a0c-b0c8-1a270a174ecb",
+            "name": "Add comments",
+            "url": "{{host}}/comments",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-05-24T15:16:06.256Z",
+            "modified": "2023-05-25T07:11:06.378Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "{{token}}"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"postId\": \"646e6251a34105ae63319ac6\",\n  \"content\": \"Have some BBQ\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "7dd65202-ff30-4476-800e-d7e97733cab2",
+            "colId": "70a1277a-b916-4ad4-b7ce-72d7c7176479",
+            "containerId": "e4931037-e1bf-489a-9594-1101989cc00f",
+            "name": "Update user by ID",
+            "url": "{{host}}/users/6469f1964f3553d5c9087ae2",
+            "method": "PUT",
+            "sortNum": 12500,
+            "created": "2023-05-21T13:18:39.752Z",
+            "modified": "2023-05-22T14:28:53.643Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "{{token}}"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Rimon\",\n  \"email\": \"rimon26654@gmail.com\",\n  \"password\": \"asd123\",\n  \"age\": 26,\n  \"country\": \"BD\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "9a89b7eb-451d-4225-9813-0bfc810088db",
+            "colId": "70a1277a-b916-4ad4-b7ce-72d7c7176479",
+            "containerId": "e4931037-e1bf-489a-9594-1101989cc00f",
+            "name": "Follow user",
+            "url": "{{host}}/users/646b853ee3aca80ba644e4c9/follow",
+            "method": "PUT",
+            "sortNum": 13125,
+            "created": "2023-05-23T13:33:05.293Z",
+            "modified": "2023-05-23T13:43:12.083Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "{{token}}"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "5ebf783f-f24c-4296-97f5-7ed5ec3135a9",
+            "colId": "70a1277a-b916-4ad4-b7ce-72d7c7176479",
+            "containerId": "e4931037-e1bf-489a-9594-1101989cc00f",
+            "name": "Unfollow user",
+            "url": "{{host}}/users/646b853ee3aca80ba644e4c9/unfollow",
+            "method": "PUT",
+            "sortNum": 13437.5,
+            "created": "2023-05-23T13:42:31.710Z",
+            "modified": "2023-05-23T13:43:19.710Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "{{token}}"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "7bb96242-2814-4504-a665-04f28525881b",
+            "colId": "70a1277a-b916-4ad4-b7ce-72d7c7176479",
+            "containerId": "e4931037-e1bf-489a-9594-1101989cc00f",
+            "name": "Delete user",
+            "url": "{{host}}/users/646b853ee3aca80ba644e4c9",
+            "method": "DELETE",
+            "sortNum": 13750,
+            "created": "2023-05-21T13:39:47.926Z",
+            "modified": "2023-05-22T15:09:57.268Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "{{token}}"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "6dde0553-adf5-4ee6-8da1-ab8e29b6702d",
+            "colId": "70a1277a-b916-4ad4-b7ce-72d7c7176479",
+            "containerId": "e4931037-e1bf-489a-9594-1101989cc00f",
+            "name": "User login",
+            "url": "{{host}}/auth/login",
+            "method": "POST",
+            "sortNum": 15000,
+            "created": "2023-05-21T11:25:37.751Z",
+            "modified": "2023-06-18T14:09:42.228Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"batman@gmail.com\",\n  \"password\": \"asd123\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "9feefb8d-21df-4516-9eef-2fc45bc05574",
+            "colId": "70a1277a-b916-4ad4-b7ce-72d7c7176479",
+            "containerId": "3d40f79c-9f11-4a0c-b0c8-1a270a174ecb",
+            "name": "Update a comment",
+            "url": "{{host}}/comments/646e2cae0ab9b90004fe8221",
+            "method": "PUT",
+            "sortNum": 15000,
+            "created": "2023-05-25T06:59:59.625Z",
+            "modified": "2023-05-25T07:15:37.631Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "{{token}}"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"postId\": \"646cc0507e6a854767152381\",\n  \"content\": \"The sun is shining after 2 days :) \"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "01c1626a-005b-435f-82f4-dc964f4e325d",
+            "colId": "70a1277a-b916-4ad4-b7ce-72d7c7176479",
+            "containerId": "3d40f79c-9f11-4a0c-b0c8-1a270a174ecb",
+            "name": "Delete a comment",
+            "url": "{{host}}/comments/646f0a0a9f1227a90523512c",
+            "method": "DELETE",
+            "sortNum": 17500,
+            "created": "2023-05-25T07:21:20.710Z",
+            "modified": "2023-05-25T07:24:16.909Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "{{token}}"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "f51b68f7-6d6a-40f8-88c7-59afc92f85b0",
+            "colId": "70a1277a-b916-4ad4-b7ce-72d7c7176479",
+            "containerId": "e4931037-e1bf-489a-9594-1101989cc00f",
+            "name": "Get users",
+            "url": "{{host}}/auth/users",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-05-21T08:57:55.806Z",
+            "modified": "2023-06-21T11:41:15.585Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "{{token}}",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "ed59720e-6fa6-4ef9-a406-929f53ef676e",
+            "colId": "70a1277a-b916-4ad4-b7ce-72d7c7176479",
+            "containerId": "329798cd-15e3-4275-86d1-daac9460c8b6",
+            "name": "Create posts",
+            "url": "{{host}}/posts",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-05-21T18:16:20.517Z",
+            "modified": "2023-05-24T17:44:56.024Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "{{token}}"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"content\": \"Wishing you wonderful evening!\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "4a3aa2f9-18f3-4b30-8731-468553ad9f81",
+            "colId": "70a1277a-b916-4ad4-b7ce-72d7c7176479",
+            "containerId": "3d40f79c-9f11-4a0c-b0c8-1a270a174ecb",
+            "name": "Get all comments",
+            "url": "{{host}}/comments",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-05-24T16:12:21.822Z",
+            "modified": "2023-05-24T16:14:54.055Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "{{token}}"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "068abf57-b519-446a-9d8a-5846a48c8128",
+            "colId": "70a1277a-b916-4ad4-b7ce-72d7c7176479",
+            "containerId": "e4931037-e1bf-489a-9594-1101989cc00f",
+            "name": "Check email",
+            "url": "{{host}}/auth/email/check",
+            "method": "POST",
+            "sortNum": 22500,
+            "created": "2023-06-21T19:51:13.058Z",
+            "modified": "2023-06-21T20:21:08.458Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "{{token}}",
+                    "isDisabled": true
+                }
+            ],
+            "params": [
+                {
+                    "name": "email",
+                    "value": "batman@gmail.com",
+                    "isDisabled": true,
+                    "isPath": false
+                },
+                {
+                    "name": "age",
+                    "value": "23",
+                    "isDisabled": true,
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"batman@gmail.com\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "2c7ee6f2-0264-4f73-b7f6-e75030701911",
+            "colId": "70a1277a-b916-4ad4-b7ce-72d7c7176479",
+            "containerId": "e4931037-e1bf-489a-9594-1101989cc00f",
+            "name": "Check phone",
+            "url": "{{host}}/auth/phone/check",
+            "method": "POST",
+            "sortNum": 23750,
+            "created": "2023-06-24T09:43:14.173Z",
+            "modified": "2023-06-24T09:44:03.993Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "{{token}}",
+                    "isDisabled": true
+                }
+            ],
+            "params": [
+                {
+                    "name": "email",
+                    "value": "batman@gmail.com",
+                    "isDisabled": true,
+                    "isPath": false
+                },
+                {
+                    "name": "age",
+                    "value": "23",
+                    "isDisabled": true,
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"phone\": \"017630169444\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "32cf8688-e216-4ba4-be4c-04875c5142af",
+            "colId": "70a1277a-b916-4ad4-b7ce-72d7c7176479",
+            "containerId": "329798cd-15e3-4275-86d1-daac9460c8b6",
+            "name": "Update post by ID",
+            "url": "{{host}}/posts/646de021aa609ccccf496a7a",
+            "method": "PUT",
+            "sortNum": 25000,
+            "created": "2023-05-22T09:22:31.711Z",
+            "modified": "2023-06-18T14:12:01.884Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "{{token}}"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"content\": \"Wishing you all!\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "7ef1b533-d722-42b5-8712-fe275767c6a5",
+            "colId": "70a1277a-b916-4ad4-b7ce-72d7c7176479",
+            "containerId": "e4931037-e1bf-489a-9594-1101989cc00f",
+            "name": "Get current user",
+            "url": "{{host}}/users/current",
+            "method": "GET",
+            "sortNum": 25000,
+            "created": "2023-06-08T10:20:34.221Z",
+            "modified": "2023-06-21T11:41:58.428Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "{{token}}"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "25e1c326-dda4-4e2b-b594-57b8006596ca",
+            "colId": "70a1277a-b916-4ad4-b7ce-72d7c7176479",
+            "containerId": "329798cd-15e3-4275-86d1-daac9460c8b6",
+            "name": "Like a post",
+            "url": "{{host}}/posts/646b8fa13fa46bb760d20725/like",
+            "method": "PUT",
+            "sortNum": 27500,
+            "created": "2023-05-23T09:12:26.084Z",
+            "modified": "2023-05-24T10:22:00.050Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "{{token}}"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "0a5bd918-d1f6-47bc-adc7-5e36e94e2d4a",
+            "colId": "70a1277a-b916-4ad4-b7ce-72d7c7176479",
+            "containerId": "329798cd-15e3-4275-86d1-daac9460c8b6",
+            "name": "Add a comment to post",
+            "url": "{{host}}/posts/646de021aa609ccccf496a7a/comment",
+            "method": "PUT",
+            "sortNum": 28750,
+            "created": "2023-05-24T17:45:15.648Z",
+            "modified": "2023-06-18T15:10:48.823Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "{{token}}"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"content\": \"test 06\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "2fba6caf-3884-48ff-bc0a-eb913db5c280",
+            "colId": "70a1277a-b916-4ad4-b7ce-72d7c7176479",
+            "containerId": "e4931037-e1bf-489a-9594-1101989cc00f",
+            "name": "Get user by ID",
+            "url": "{{host}}/users/6469f1964f3553d5c9087ae2",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2023-05-21T13:08:33.094Z",
+            "modified": "2023-05-21T13:15:36.613Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "{{token}}"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "1879f132-02fe-4f2b-8cf2-84a93d21c209",
+            "colId": "70a1277a-b916-4ad4-b7ce-72d7c7176479",
+            "containerId": "329798cd-15e3-4275-86d1-daac9460c8b6",
+            "name": "Get all posts",
+            "url": "{{host}}/posts",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2023-05-21T18:29:29.757Z",
+            "modified": "2023-05-21T18:45:55.118Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "{{token}}"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "0c51232b-7522-49ea-8933-7e21e809e3c2",
+            "colId": "70a1277a-b916-4ad4-b7ce-72d7c7176479",
+            "containerId": "3d40f79c-9f11-4a0c-b0c8-1a270a174ecb",
+            "name": "Get a comment",
+            "url": "{{host}}/comments/646e2cae0ab9b90004fe8221",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2023-05-24T18:49:58.253Z",
+            "modified": "2023-05-24T18:51:09.400Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "{{token}}"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "a3fe220e-9d8f-49fe-8478-eb7130246de6",
+            "colId": "70a1277a-b916-4ad4-b7ce-72d7c7176479",
+            "containerId": "329798cd-15e3-4275-86d1-daac9460c8b6",
+            "name": "Get post by ID",
+            "url": "{{host}}/posts/646e6251a34105ae63319ac6",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2023-05-22T08:52:08.056Z",
+            "modified": "2023-06-12T08:16:13.003Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "{{token}}"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "1570f89a-6ed6-4f65-a8fa-2f312343f0f1",
+            "colId": "70a1277a-b916-4ad4-b7ce-72d7c7176479",
+            "containerId": "329798cd-15e3-4275-86d1-daac9460c8b6",
+            "name": "Delete a post",
+            "url": "{{host}}/posts/646e4d1ef2c8b95845ae9cf1",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2023-05-22T10:18:07.499Z",
+            "modified": "2023-05-24T17:52:25.923Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "{{token}}"
+                }
+            ],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
