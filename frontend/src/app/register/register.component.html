@@ -1,0 +1,63 @@
+<h3 i18n>Register user</h3>
+
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()" style="margin-top: 15px;">
+	<div class="form-control">
+		<input id="name" type="text" i18n-placeholder placeholder="Name" formControlName="name"
+			[class.invalid]="nameControl?.touched && nameControl?.invalid"
+			[class.valid]="nameControl?.touched && nameControl?.valid">
+		<ng-container *ngTemplateOutlet="errorMessage; context: { control: nameControl }"></ng-container>
+	</div>
+
+	<div class="form-control">
+		<input id="email" type="text" i18n-placeholder placeholder="Email" formControlName="email"
+			[class.invalid]="emailControl?.touched && emailControl?.invalid"
+			[class.valid]="emailControl?.touched && emailControl?.valid">
+		<ng-container *ngTemplateOutlet="errorMessage; context: { control: emailControl }"></ng-container>
+	</div>
+
+	<div class="form-control">
+		<input id="password" type="password" i18n-placeholder placeholder="Password" formControlName="password"
+			[class.invalid]="passwordControl?.touched && passwordControl?.invalid"
+			[class.valid]="passwordControl?.touched && passwordControl?.valid">
+		<ng-container *ngTemplateOutlet="errorMessage; context: { control: passwordControl }"></ng-container>
+	</div>
+
+	<div class="form-control">
+		<input id="confirm-password" type="password" i18n-placeholder placeholder="Confirm password"
+			formControlName="confirmPassword"
+			[class.invalid]="confirmPasswordControl?.touched && confirmPasswordControl?.invalid"
+			[class.valid]="confirmPasswordControl?.touched && confirmPasswordControl?.valid">
+		<ng-container *ngTemplateOutlet="errorMessage; context: { control: confirmPasswordControl }"></ng-container>
+	</div>
+
+	<div class="form-control">
+		<input id="age" type="number" i18n-placeholder placeholder="Age" formControlName="age"
+			[class.invalid]="ageControl?.touched && ageControl?.invalid"
+			[class.valid]="ageControl?.touched && ageControl?.valid">
+		<ng-container *ngTemplateOutlet="errorMessage; context: { control: ageControl }"></ng-container>
+	</div>
+
+	<div class="form-control">
+		<input id="phone" type="text" placeholder="Phone" formControlName="phone"
+			[class.invalid]="phoneControl?.touched && phoneControl?.invalid"
+			[class.valid]="phoneControl?.touched && phoneControl?.valid">
+		<ng-container *ngTemplateOutlet="errorMessage; context: { control: phoneControl }"></ng-container>
+	</div>
+
+	<div class="form-control">
+		<input id="country" type="text" i18n-placeholder placeholder="Country" formControlName="country"
+			[class.invalid]="countryControl?.touched && countryControl?.invalid"
+			[class.valid]="countryControl?.touched && countryControl?.valid">
+		<ng-container *ngTemplateOutlet="errorMessage; context: { control: countryControl }"></ng-container>
+	</div>
+
+	<button id="signup" type="submit" [disabled]="!userForm.valid" i18n>Signup</button>
+</form>
+
+<ng-template #errorMessage let-control="control">
+	<ng-container *ngFor="let error of objectKeys(control.errors || {})">
+		<small class="error-message" *ngIf="control?.touched">
+			{{ getErrorMessageKey(error) | translate }}<br />
+		</small>
+	</ng-container>
+</ng-template>

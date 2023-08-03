@@ -1,0 +1,22 @@
+{
+	"HEADER": {
+		"DESCRIPTION": "This is the description"
+	},
+	"ERROR_MESSAGES": {
+		"REQUIRED_FIELD": "This field is required",
+		"MINIMUN_NAME_LENGTH": "Minimum 3 characters long",
+		"MAXIMUM_NAME_LENGTH": "Maximum 15 characters long",
+		"EMAIL_VALIDITY": "Invalid email address",
+		"EMAIL_EXISTENCE": "Email already exists",
+		"PASSWORD_MATCHING": "Password must match",
+		"MINIMUM_AGE": "User must be at least 16 years old",
+		"PHONE_NUMBER_PATTERN": "Phone number can start with 0 or +, length should be in between 11 to 14",
+		"DUPLICATE_PHONE_NUMBER": "Duplicate phone number, try new one",
+		"MINIMUM_PASSWORD_LENGTH": "Password should be minimum 5 characters",
+		"MAXIMUM_PASSWORD_LENGTH": "Password should be maximum 10 characters",
+		"MINIMUM_UPPERCASE_CHARACTER": "Password should contain minimum 1 uppercase character",
+		"MINIMUM_LOWERCASE_CHARACTER": "Password should contain minimum 1 lowercase character",
+		"MINIMUM_DIGIT": "Password should contain minimum 1 digit",
+		"": ""
+	}
+}

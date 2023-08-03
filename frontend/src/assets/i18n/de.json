@@ -1,0 +1,22 @@
+{
+	"HEADER": {
+		"DESCRIPTION": "Das ist deskriptionen"
+	},
+	"ERROR_MESSAGES": {
+		"REQUIRED_FIELD": "Dieses Feld ist erforderlich",
+		"MINIMUN_NAME_LENGTH": "Mindestens 3 Zeichen lang",
+		"MAXIMUM_NAME_LENGTH": "Maximal 15 Zeichen lang",
+		"EMAIL_VALIDITY": "Ungültige E-Mail Adresse",
+		"EMAIL_EXISTENCE": "E-Mail existiert bereits",
+		"PASSWORD_MATCHING": "Passwort muss übereinstimmen",
+		"MINIMUM_AGE": "Der Benutzer muss mindestens 16 Jahre alt sein",
+		"PHONE_NUMBER_PATTERN": "Die Rufnummer kann mit 0 oder + beginnen, die Länge sollte zwischen 11 und 14 liegen",
+		"DUPLICATE_PHONE_NUMBER": "Doppelte Rufnummer, versuchen Sie es mit einer neuen",
+		"MINIMUM_PASSWORD_LENGTH": "Das Passwort sollte mindestens 5 Zeichen lang sein",
+		"MAXIMUM_PASSWORD_LENGTH": "Das Passwort sollte maximal 10 Zeichen lang sein",
+		"MINIMUM_UPPERCASE_CHARACTER": "Das Passwort sollte mindestens 1 Großbuchstabe enthalten",
+		"MINIMUM_LOWERCASE_CHARACTER": "Das Passwort sollte mindestens 1 Kleinbuchstabe enthalten",
+		"MINIMUM_DIGIT": "Das Passwort sollte mindestens 1 Ziffer enthalten",
+		"": ""
+	}
+}

@@ -1,0 +1,18 @@
+<div>
+	<a [routerLink]="['posts']" i18n>Newsfeed</a>
+	<a *ngIf="isLoggedIn" [routerLink]="['users']" i18n>Profile</a>
+	<a [routerLink]="['users/users-list']" i18n>Users list</a>
+	<a *ngIf="!isLoggedIn" [routerLink]="['register']">Signup</a>
+	<a *ngIf="!isLoggedIn" [routerLink]="['login']" i18n>Login</a>
+
+	<button *ngIf="isLoggedIn" (click)="logout()" i18n>Logout</button>
+	<!-- <a href="/en-US" style="background-color: cadetblue; padding: 1px;">en-US</a>
+	<a href="/de-DE" style="background-color: cadetblue; padding: 1px;">de-DE</a>
+	<a href="/es-PR" style="background-color: cadetblue; padding: 1px;">es-PR</a> -->
+	<button class="locale-btn" (click)="setDefaultLanguage('en')">eng</button>
+	<button class="locale-btn" (click)="setDefaultLanguage('de')">deu</button>
+	<button class="locale-btn" (click)="setDefaultLanguage('es')">spa</button>
+</div>
+
+<div>
+</div>

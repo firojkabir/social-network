@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+button {
+  cursor: pointer;
+}
+
+input {
+  padding: 3px;
+  display: block;
+}
+
+.form-control {
+  margin-bottom: 10px;
+}
+
+input.invalid {
+  border: 2px solid red;
+}
+
+input.valid {
+  border: 2px solid seagreen;
+}
+
+.error-message {
+  color: red;
+}

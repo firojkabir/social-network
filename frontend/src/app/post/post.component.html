@@ -1,0 +1,14 @@
+<h3>Newsfeed</h3>
+<button (click)="navigateToAddPost()" style="margin-bottom: 15px;" i18n>Create a post</button>
+<hr>
+<div *ngIf="isLoggedIn">
+	<div *ngFor="let post of posts">
+		<b i18n>{{ post.content }}</b>
+		<br>
+		<button (click)="navigateToEditPost(post._id)" i18n>Edit</button>
+		<button (click)="deletePostById(post._id)" i18n>Delete</button>
+		<button (click)="navigateToPostDetails(post._id)" i18n>Post details</button>
+		<hr>
+	</div>
+</div>
+<h3 *ngIf="!isLoggedIn" style="color:crimson" i18n>Please Login to see the Newsfeed.</h3>

@@ -1,0 +1,21 @@
+{
+	"HEADER": {
+		"DESCRIPTION": "Esta es la descripción"
+	},
+	"ERROR_MESSAGES": {
+		"REQUIRED_FIELD": "Este campo es obligatorio",
+		"MINIMUN_NAME_LENGTH": "Mínimo 3 caracteres",
+		"MAXIMUM_NAME_LENGTH": "Máximo 15 caracteres",
+		"EMAIL_VALIDITY": "Dirección de correo electrónico no válida",
+		"EMAIL_EXISTENCE": "El correo electrónico ya existe",
+		"PASSWORD_MATCHING": "La contraseña debe coincidir",
+		"MINIMUM_AGE": "El usuario debe tener al menos 16 años",
+		"PHONE_NUMBER_PATTERN": "El número de teléfono puede empezar por 0 o +, la longitud debe estar comprendida entre 11 y 14",
+		"DUPLICATE_PHONE_NUMBER": "Número de teléfono duplicado, pruebe con uno nuevo",
+		"MINIMUM_PASSWORD_LENGTH": "La contraseña debe tener un mínimo de 5 caracteres",
+		"MAXIMUM_PASSWORD_LENGTH": "La contraseña debe tener un máximo de 10 caracteres",
+		"MINIMUM_UPPERCASE_CHARACTER": "La contraseña debe contener como mínimo 1 carácter en mayúscula",
+		"MINIMUM_LOWERCASE_CHARACTER": "La contraseña debe contener como mínimo 1 carácter en minúscula",
+		"MINIMUM_DIGIT": "La contraseña debe contener como mínimo 1 dígito"
+	}
+}

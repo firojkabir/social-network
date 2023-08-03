@@ -1,0 +1,10 @@
+<h3 i18n>Login</h3>
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()" style="margin-top: 15px;">
+	<label for="email" i18n>Email: </label>
+	<input id="email" type="text" formControlName="email">
+	<br><br>
+	<label for="password" i18n>Password: </label>
+	<input id="password" type="text" formControlName="password">
+	<br><br>
+	<button id="login" type="submit" [disabled]="!loginForm.valid" i18n>Login</button>
+</form>

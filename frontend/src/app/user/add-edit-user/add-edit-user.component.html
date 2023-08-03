@@ -1,0 +1,11 @@
+<h3 i18n>User form</h3>
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()" style="margin-top: 15px;">
+	<input type="text" i18n-placeholder placeholder="Name" formControlName="name"><br /><br />
+	<input type="text" i18n-placeholder placeholder="Email" formControlName="email"><br /><br />
+	<input type="password" i18n-placeholder placeholder="Password" formControlName="password"><br /><br />
+	<input type="number" i18n-placeholder placeholder="Age" formControlName="age"><br /><br />
+	<input type="text" i18n-placeholder placeholder="Country" formControlName="country"><br /><br />
+
+	<button type="submit" [disabled]="!userForm.valid" i18n>Submit</button>
+
+</form>

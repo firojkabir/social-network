@@ -1,0 +1,5 @@
+<app-navigation></app-navigation>
+<hr>
+<p *ngFor="let activity of activities"><a [routerLink]="['posts', activity.postId, 'details']">Posts</a> - {{
+	activity.comment }}</p>
+<router-outlet></router-outlet>

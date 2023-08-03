@@ -1,0 +1,5 @@
+<form [formGroup]="postForm" (ngSubmit)="onSubmit()" style="margin-top: 15px;">
+	<input type="text" placeholder="Post content" formControlName="content" i18n-placeholder><br><br>
+
+	<button type="submit" [disabled]="!postForm.valid" i18n>Submit</button>
+</form>

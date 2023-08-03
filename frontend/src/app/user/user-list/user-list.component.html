@@ -1,0 +1,12 @@
+<h3 i18n>Socio users list</h3>
+<hr>
+<div *ngIf="isLoggedIn">
+	<div *ngFor="let user of usersList">
+		<b>{{ user.name }}</b>
+		<p>{{ user.email }} - {{ user.age }} - {{ user.country }}</p>
+		<button (click)="followAUser(user._id, user.followers)" style="margin-right: 10px;" i18n>Follow</button>
+		<button (click)="unfollowAUser(user._id, user.followers)" i18n>Unfollow</button>
+		<hr>
+	</div>
+</div>
+<h3 *ngIf="!isLoggedIn" style="color:crimson" i18n>Please Login to see the users list.</h3>

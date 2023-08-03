@@ -1,0 +1,12 @@
+<b>{{ post.content }}</b>
+<ng-container *ngFor="let comment of post.comments">
+	<p>{{ comment.content }}</p>
+	<!-- <button (click)="deleteComment(comment._id)">delete</button> -->
+</ng-container>
+<form [formGroup]="commentForm" (ngSubmit)="onSubmit(post._id)">
+	<input type="text" placeholder="add a comment" formControlName="content" style="margin-bottom: 10px;"
+		i18n-placeholder><br>
+</form>
+<br>
+<button (click)="navigateToEditPost(post._id)" i18n>Edit</button>
+<button (click)="deletePostById(post._id)" i18n>Delete</button>

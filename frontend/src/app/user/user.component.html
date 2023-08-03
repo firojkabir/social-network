@@ -1,0 +1,17 @@
+<h3 i18n>User profile</h3>
+<hr>
+<div *ngFor="let user of users">
+	<b>{{ user.name }}</b>
+	<p>{{ user.age }}</p>
+	<p>{{ user.country }}</p>
+	<b i18n>Followers:</b>
+	<p *ngFor="let follower of user.followers">{{ follower }}</p>
+	<br>
+	<b i18n>Followings:</b>
+	<p *ngFor="let following of user.followings">{{ following }}</p>
+	<br><br>
+	<button (click)="navigateToEditUser(user._id)" style="margin-right: 10px;" i18n>Edit profile</button>
+	<button (click)="deleteUserById(user._id)" i18n>Delete profile</button>
+	<hr>
+</div>
+<button (click)="navigateToAddPost()" style="margin-bottom: 15px;" i18n>Create a post</button>
