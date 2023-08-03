@@ -1,7 +1,7 @@
 import {
-  HTTP_INTERCEPTORS,
-  HttpClient,
-  HttpClientModule,
+	HTTP_INTERCEPTORS,
+	HttpClient,
+	HttpClientModule,
 } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -18,7 +18,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { RegisterComponent } from './register/register.component';
 import { TranslationUtil } from './utils/translation.util';
 
-const config: SocketIoConfig = { url: 'http://localhost:3001' };
+const config: SocketIoConfig = { url: 'http://localhost:3000' };
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
