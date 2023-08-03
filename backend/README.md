@@ -1,3 +1,5 @@
+# SocialNetworkApi
+
 ## Intro
 
 This is the backend REST API project for the Social Network project. It is implemented using **ExpressJS** library powered by **NodeJS**. The **NoSQL** database platform **MongoDB** has been used for data storage.
