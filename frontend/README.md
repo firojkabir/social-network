@@ -2,17 +2,17 @@
 
 This is the frontend project for the Social Network REST API project. This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.2. From the application a user can perform following actions.
 
-- See list of all users
-- See details of individual user
+- See the list of all users
+- See details of the individual user
 - Register a new user
-- Update information of an user
+- Update information of a user
 - Follow other users
-- Delete an user
+- Delete a user
 - Create a post
 - See lists of posts
 - Update the content of a post
 - Delete a post
-- Add comments to post
+- Add comments to the post
 
 ---
 
