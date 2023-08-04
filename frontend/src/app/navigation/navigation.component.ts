@@ -13,11 +13,11 @@ export class NavigationComponent {
 
   siteLanguage: any = 'English';
   siteLocale: any;
-  languageList = [
-    { code: 'en-US', label: 'English' },
-    { code: 'de-DE', label: 'Deutsch' },
-    { code: 'es-PR', label: 'Spanish' },
-  ];
+  //   languageList = [
+  //     { code: 'en-US', label: 'English' },
+  //     { code: 'de-DE', label: 'Deutsch' },
+  //     { code: 'es-PR', label: 'Spanish' },
+  //   ];
 
   constructor(
     private router: Router,
@@ -33,9 +33,9 @@ export class NavigationComponent {
 
   ngOnInit() {
     this.siteLocale = window.location.pathname.split('/')[1];
-    this.siteLanguage = this.languageList.find(
-      (f) => f.code === this.siteLocale
-    )?.label;
+    // this.siteLanguage = this.languageList.find(
+    //   (f) => f.code === this.siteLocale
+    // )?.label;
   }
 
   logout = () => {
